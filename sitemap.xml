@@ -2,14 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://sasuke7chen.github.io/2021/04/08/%E5%85%B3%E4%BA%8EJava/</loc>
+    <loc>http://sasuke7chen.github.io/about/index.html</loc>
     
     <lastmod>2021-04-08</lastmod>
     
   </url>
   
   <url>
-    <loc>http://sasuke7chen.github.io/2021/04/08/hello-world/</loc>
+    <loc>http://sasuke7chen.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-04-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sasuke7chen.github.io/categories/index.html</loc>
+    
+    <lastmod>2021-04-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sasuke7chen.github.io/2021/0408undefined.html</loc>
+    
+    <lastmod>2021-04-08</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sasuke7chen.github.io/2021/0408undefined.html</loc>
     
     <lastmod>2021-04-08</lastmod>
     
