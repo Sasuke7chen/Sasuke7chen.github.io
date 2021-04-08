@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Shanecaiii</title>
   
+  <subtitle>Welcome</subtitle>
+  <link href="http://sasuke7chen.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://sasuke7chen.github.io/"/>
   <updated>2021-04-08T04:49:02.461Z</updated>
-  <id>http://example.com/</id>
+  <id>http://sasuke7chen.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Ashane</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>关于Java</title>
-    <link href="http://example.com/2021/04/08/%E5%85%B3%E4%BA%8EJava/"/>
-    <id>http://example.com/2021/04/08/%E5%85%B3%E4%BA%8EJava/</id>
+    <link href="http://sasuke7chen.github.io/2021/04/08/%E5%85%B3%E4%BA%8EJava/"/>
+    <id>http://sasuke7chen.github.io/2021/04/08/%E5%85%B3%E4%BA%8EJava/</id>
     <published>2021-04-08T04:48:12.000Z</published>
     <updated>2021-04-08T04:49:02.461Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/04/08/hello-world/"/>
-    <id>http://example.com/2021/04/08/hello-world/</id>
+    <link href="http://sasuke7chen.github.io/2021/04/08/hello-world/"/>
+    <id>http://sasuke7chen.github.io/2021/04/08/hello-world/</id>
     <published>2021-04-08T04:45:43.827Z</published>
     <updated>2021-04-08T04:45:43.827Z</updated>
     
