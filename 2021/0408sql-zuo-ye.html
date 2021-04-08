@@ -441,6 +441,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Homework/" class="post-category">
+                                Homework
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -469,14 +478,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SQL作业"><a href="#SQL作业" class="headerlink" title="SQL作业"></a>SQL作业</h1><p>SELECT 字段1, 字段2, … (或者 *) （选择哪些数据列）</p>
+                <h1 id="SQL作业"><a href="#SQL作业" class="headerlink" title="SQL作业"></a>SQL作业</h1><blockquote>
+<p>再多练练</p>
+</blockquote>
+<p>SELECT 字段1, 字段2, … (或者 *) （选择哪些数据列）</p>
 <p>FROM 表名[, 表名…] （从哪些表里选择）</p>
 <p>[JOIN 表名 ON 相等条件表达式] （这些表怎么连接）</p>
 <p>[WHERE 条件表达式] （得到的数据怎么筛选）</p>
 <p>[GROUP BY 字段] （需不需要对结果集进行分组）</p>
 <p>[HAVING 条件表达式] （筛选分组后通过聚合函数得到的值）</p>
 <p>[ORDER BY 字段]; （指定排序方式）</p>
-<p>现有关系模式如下： </p>
+<p><strong>现有关系模式如下：</strong> </p>
 <p>学生（学号，姓名，性别，年龄）；</p>
 <p>Student (sid, sname, sex, age);</p>
 <p>课程（课程号，课程名，教师姓名）；</p>
@@ -496,8 +508,8 @@
 <span class="token keyword">from</span> Course<span class="token punctuation">,</span> SC
 <span class="token keyword">where</span> Course<span class="token punctuation">.</span>cid <span class="token operator">=</span> SC<span class="token punctuation">.</span>cid
 <span class="token operator">and</span> Course<span class="token punctuation">.</span>cid <span class="token operator">not</span> <span class="token operator">in</span><span class="token punctuation">(</span><span class="token keyword">select</span> cid 
-                 <span class="token keyword">from</span> Student<span class="token punctuation">,</span> SC 
-                 <span class="token keyword">where</span> Student<span class="token punctuation">.</span>sid <span class="token operator">=</span> SC<span class="token punctuation">.</span>sid <span class="token operator">and</span> sname <span class="token operator">=</span> <span class="token string">'李想'</span><span class="token punctuation">)</span>
+                       <span class="token keyword">from</span> Student<span class="token punctuation">,</span> SC 
+                      <span class="token keyword">where</span> Student<span class="token punctuation">.</span>sid <span class="token operator">=</span> SC<span class="token punctuation">.</span>sid <span class="token operator">and</span> sname <span class="token operator">=</span> <span class="token string">'李想'</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">--4.检索至少选修了两门课程的学生的学号。</span>
 <span class="token keyword">select</span> <span class="token keyword">distinct</span> s1<span class="token punctuation">.</span>sid 
 <span class="token keyword">from</span> SC s1<span class="token punctuation">,</span> SC s2
@@ -811,8 +823,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Ashane
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Homework/" class="post-category">
+                                    Homework
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -857,11 +873,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Ashane
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Summary/" class="post-category">
+                                    Summary
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
                 </div>
                 
             </div>
