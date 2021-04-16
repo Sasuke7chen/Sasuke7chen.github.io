@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://sasuke7chen.github.io/2021/0416java-polymorphism.html</loc>
+    
+    <lastmod>2021-04-16</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://sasuke7chen.github.io/2021/0415-er-fen-yu-qian-zhui-he.html</loc>
+    
+    <lastmod>2021-04-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://sasuke7chen.github.io/2021/0415-di-gui-yu-di-tui.html</loc>
     
     <lastmod>2021-04-15</lastmod>
@@ -53,7 +67,7 @@
 
   <url>
     <loc>http://sasuke7chen.github.io/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -61,21 +75,21 @@
   
   <url>
     <loc>http://sasuke7chen.github.io/tags/SQL/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sasuke7chen.github.io/tags/Java/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sasuke7chen.github.io/tags/C-C/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -84,28 +98,28 @@
   
   <url>
     <loc>http://sasuke7chen.github.io/categories/Homework/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sasuke7chen.github.io/categories/Summary/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sasuke7chen.github.io/categories/Notes/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://sasuke7chen.github.io/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/</loc>
-    <lastmod>2021-04-15</lastmod>
+    <lastmod>2021-04-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SQL作业, Shanecaiii">
+    <meta name="keywords" content="Java-polymorphism, Shanecaiii">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SQL作业 | Shanecaiii</title>
+    <title>Java-polymorphism | Shanecaiii</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SQL作业</h1>
+                    <h1 class="description center-align post-title">Java-polymorphism</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/SQL/">
-                                <span class="chip bg-color">SQL</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Homework/" class="post-category">
-                                Homework
+                            <a href="/categories/Notes/" class="post-category">
+                                Notes
                             </a>
                         
                     </div>
@@ -457,7 +457,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-04-08
+                    2021-04-16
                 </div>
                 
 
@@ -478,88 +478,117 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="SQL作业"><a href="#SQL作业" class="headerlink" title="SQL作业"></a>SQL作业</h1><blockquote>
-<p>再多练练</p>
-</blockquote>
-<p>SELECT 字段1, 字段2, … (或者 *) （选择哪些数据列）</p>
-<p>FROM 表名[, 表名…] （从哪些表里选择）</p>
-<p>[JOIN 表名 ON 相等条件表达式] （这些表怎么连接）</p>
-<p>[WHERE 条件表达式] （得到的数据怎么筛选）</p>
-<p>[GROUP BY 字段] （需不需要对结果集进行分组）</p>
-<p>[HAVING 条件表达式] （筛选分组后通过聚合函数得到的值）</p>
-<p>[ORDER BY 字段]; （指定排序方式）</p>
-<p><strong>现有关系模式如下：</strong> </p>
-<p>学生（学号，姓名，性别，年龄）；</p>
-<p>Student (sid, sname, sex, age);</p>
-<p>课程（课程号，课程名，教师姓名）；</p>
-<p>course (cid, cname, tname)；</p>
-<p>选课表（课程号，学号，成绩）</p>
-<p>SC (cid, sid, score, date)；</p>
-<pre class=" language-sql"><code class="language-sql"><span class="token comment" spellcheck="true">--1.检索年龄大于20岁的男生的学号和姓名。</span>
-<span class="token keyword">select</span> sid<span class="token punctuation">,</span> sname 
-<span class="token keyword">from</span> Student 
-<span class="token keyword">where</span> sex <span class="token operator">=</span> <span class="token string">'男'</span> <span class="token operator">and</span> age <span class="token operator">></span> <span class="token number">20</span>
-<span class="token comment" spellcheck="true">--2.检索选修了姓刘的老师所教授的课程的女学生的姓名。</span>
-<span class="token keyword">select</span> sname
-<span class="token keyword">from</span> Student<span class="token punctuation">,</span> Course<span class="token punctuation">,</span> SC
-<span class="token keyword">where</span> Student<span class="token punctuation">.</span>sid <span class="token operator">=</span> SC<span class="token punctuation">.</span>sid <span class="token operator">and</span> Course<span class="token punctuation">.</span>cid <span class="token operator">=</span> SC<span class="token punctuation">.</span>cid <span class="token operator">and</span> sex <span class="token operator">=</span> <span class="token string">'女'</span> <span class="token operator">and</span> tname <span class="token operator">like</span> <span class="token string">'刘%'</span>
-<span class="token comment" spellcheck="true">--3.检索李想同学不学的课程的课程号和课程名。</span>
-<span class="token keyword">select</span> Course<span class="token punctuation">.</span>cid<span class="token punctuation">,</span> cname
-<span class="token keyword">from</span> Course<span class="token punctuation">,</span> SC
-<span class="token keyword">where</span> Course<span class="token punctuation">.</span>cid <span class="token operator">=</span> SC<span class="token punctuation">.</span>cid
-<span class="token operator">and</span> Course<span class="token punctuation">.</span>cid <span class="token operator">not</span> <span class="token operator">in</span><span class="token punctuation">(</span><span class="token keyword">select</span> cid 
-                       <span class="token keyword">from</span> Student<span class="token punctuation">,</span> SC 
-                      <span class="token keyword">where</span> Student<span class="token punctuation">.</span>sid <span class="token operator">=</span> SC<span class="token punctuation">.</span>sid <span class="token operator">and</span> sname <span class="token operator">=</span> <span class="token string">'李想'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">--4.检索至少选修了两门课程的学生的学号。</span>
-<span class="token keyword">select</span> <span class="token keyword">distinct</span> s1<span class="token punctuation">.</span>sid 
-<span class="token keyword">from</span> SC s1<span class="token punctuation">,</span> SC s2
-<span class="token keyword">where</span> s1<span class="token punctuation">.</span>sid <span class="token operator">=</span> s2<span class="token punctuation">.</span>sid <span class="token operator">and</span> s1<span class="token punctuation">.</span>cid <span class="token operator">&lt;></span> s2<span class="token punctuation">.</span>cid
-<span class="token comment" spellcheck="true">--5.求刘老师所教授课程的每门课的平均成绩。</span>
-<span class="token keyword">select</span> SC<span class="token punctuation">.</span>cid<span class="token punctuation">,</span> <span class="token function">avg</span><span class="token punctuation">(</span>score<span class="token punctuation">)</span> <span class="token keyword">as</span> avg_score
-<span class="token keyword">from</span> SC <span class="token keyword">join</span> Course 
-<span class="token keyword">on</span> SC<span class="token punctuation">.</span>cid <span class="token operator">=</span> Course<span class="token punctuation">.</span>cid 
-<span class="token keyword">where</span> tname <span class="token operator">like</span> <span class="token string">'刘%'</span>
-<span class="token keyword">group</span> <span class="token keyword">by</span> SC<span class="token punctuation">.</span>cid
-<span class="token comment" spellcheck="true">--6.假设不存在重修的情况，请统计每门课的选修人数(选课人数超过两人的课程才统计)。</span>
-<span class="token comment" spellcheck="true">--要求显示课程号和人数，查询结果按人数降序排列，若人数相同，按课程号升序排列。</span>
-<span class="token keyword">select</span> cid<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span>cid<span class="token punctuation">)</span> <span class="token keyword">as</span> stu_total
-<span class="token keyword">from</span> SC
-<span class="token keyword">group</span> <span class="token keyword">by</span> cid
-<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>cid<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token number">2</span>
-<span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">count</span><span class="token punctuation">(</span>cid<span class="token punctuation">)</span> <span class="token keyword">desc</span><span class="token punctuation">,</span> cid
-<span class="token comment" spellcheck="true">--7.求年龄大于所有女生年龄的男生的姓名和年龄。</span>
-<span class="token keyword">select</span> sname<span class="token punctuation">,</span> age
-<span class="token keyword">from</span> Student
-<span class="token keyword">where</span> sex <span class="token operator">=</span> <span class="token string">'男'</span> <span class="token operator">and</span> age <span class="token operator">></span> <span class="token keyword">all</span><span class="token punctuation">(</span><span class="token keyword">select</span> age 
-                               <span class="token keyword">from</span> Student
-                               <span class="token keyword">where</span> sex <span class="token operator">=</span> <span class="token string">'女'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">--8.假定不存在重修的情况，求选修了所有课程的学生的学号姓名。(可以不用相关子查询做)</span>
-<span class="token comment" spellcheck="true">--（选出不存在没有选过的课程的学生</span>
-<span class="token keyword">select</span> sid<span class="token punctuation">,</span> sname
-<span class="token keyword">from</span> Student A
-<span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span><span class="token punctuation">(</span><span class="token keyword">select</span> cid 
-                 <span class="token keyword">from</span> Course B
-                 <span class="token keyword">where</span> <span class="token operator">not</span> <span class="token keyword">exists</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span> 
-                                  <span class="token keyword">from</span> SC C
-                                  <span class="token keyword">where</span> A<span class="token punctuation">.</span>sid <span class="token operator">=</span> C<span class="token punctuation">.</span>sid <span class="token operator">and</span> B<span class="token punctuation">.</span>cid <span class="token operator">=</span> C<span class="token punctuation">.</span>cid<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true">--9.查询重修次数在2次以上的学生学号，课程号，重修次数</span>
-<span class="token keyword">select</span> sid<span class="token punctuation">,</span> cid<span class="token punctuation">,</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">date</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token keyword">as</span> retake
-<span class="token keyword">from</span> SC
-<span class="token keyword">group</span> <span class="token keyword">by</span> sid<span class="token punctuation">,</span> cid
-<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">date</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">2</span>
-<span class="token comment" spellcheck="true">--10.查询重修学生人数最多的课程号，课程名，教师姓名</span>
-<span class="token keyword">select</span> B<span class="token punctuation">.</span>cid<span class="token punctuation">,</span> cname<span class="token punctuation">,</span> tname
-<span class="token keyword">from</span> Course B<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token keyword">select</span> cid<span class="token punctuation">,</span> sid 
-                <span class="token keyword">from</span> SC 
-                <span class="token keyword">group</span> <span class="token keyword">by</span> cid<span class="token punctuation">,</span> sid 
-                <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">date</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">as</span> C
-<span class="token keyword">where</span> B<span class="token punctuation">.</span>cid <span class="token operator">=</span> C<span class="token punctuation">.</span>cid
-<span class="token keyword">group</span> <span class="token keyword">by</span> B<span class="token punctuation">.</span>cid<span class="token punctuation">,</span> cname<span class="token punctuation">,</span> tname
-<span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>sid<span class="token punctuation">)</span> <span class="token operator">>=</span> <span class="token keyword">all</span><span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token function">count</span><span class="token punctuation">(</span>sid<span class="token punctuation">)</span> 
-                         <span class="token keyword">from</span> SC 
-                         <span class="token keyword">group</span> <span class="token keyword">by</span> cid<span class="token punctuation">,</span> sid 
-                         <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span>sid<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">1</span><span class="token punctuation">)</span>
-</code></pre>
+                <h1 id="Java-多态-polymorphism"><a href="#Java-多态-polymorphism" class="headerlink" title="Java-多态(polymorphism)"></a>Java-多态(polymorphism)</h1><h3 id="为什么会出现多态"><a href="#为什么会出现多态" class="headerlink" title="为什么会出现多态?"></a>为什么会出现多态?</h3><ul>
+<li><p>Java 中的引用变量有两个类型：</p>
+<ul>
+<li><strong>一个是编译时的类型，一个是运行时的类型，</strong> 编译时的类型由声明该变量时使用的类型决定， 运行时的类型由实际赋给该变量的对象决定。</li>
+</ul>
+</li>
+<li><p><u>如果编译时的类型与运行时的类型不一致就会出现所谓的多态？</u></p>
+</li>
+</ul>
+<h3 id="多态性"><a href="#多态性" class="headerlink" title="多态性"></a>多态性</h3><ul>
+<li>概念：是面向对象程序设计的另一个重要特征， 其基本含义是“拥有多种形态”，具体指在程序 中用相同的名称来表示不同的含义。例如：用同 一方法名来表示不同的操作 </li>
+<li>类型：有两种 <ul>
+<li>静态多态性：包括隐藏、方法的<u>重载</u> </li>
+<li>动态多态性：在编译时不能确定所要调用的方法，只有在运行时才能确定所要调用的方法，又称为运行时的多态性</li>
+</ul>
+</li>
+</ul>
+<h4 id="静态多态（静多态）"><a href="#静态多态（静多态）" class="headerlink" title="静态多态（静多态）"></a>静态多态（静多态）</h4><ul>
+<li>静态多态：即在编译时决定调用哪个方法，也称为编译时多态，也称为静态联编，也称为静绑定； </li>
+<li>静态多态一般是指<strong>方法重载，方法隐藏</strong>； </li>
+<li>只要构成了方法重载，就可以认为形成了 静态多态的条件；因此，静态多态与是否 发生继承没有必然联系。</li>
+</ul>
+<h5 id="方法重载（Overloading）"><a href="#方法重载（Overloading）" class="headerlink" title="方法重载（Overloading）"></a>方法重载（Overloading）</h5><ul>
+<li>方法重载：Java允许在一个类中定义多个同名的方法，但这些方法的参数列表必须不同 <ul>
+<li>方法名相同，参数个数、参数类型及参数顺序至少有一个不同 </li>
+</ul>
+</li>
+<li>重载的目的：一般是为了创建一组要完成相似任务的成员方法。 </li>
+<li>构造方法和静态成员方法都是可以重载，静态成员方法重载后的方法也可以是非静态成员方法。</li>
+</ul>
+<p>⚫ 注意1：对于方法重载，返回值类型与访问权限修饰符可以相同也可以不同，上述两项不能当做判断是否重载的条件。 </p>
+<p>⚫ 注意2：如果一个类中有两个同名方法，其参数列表完全一样，仅仅返回值类型不同，则编译时会 产生错误</p>
+<h4 id="动态多态（动多态）"><a href="#动态多态（动多态）" class="headerlink" title="动态多态（动多态）"></a>动态多态（动多态）</h4><ul>
+<li>方法覆盖是子类的成员方法重写了父类的成员方法，重写的目的很大程度上是为了实现多态；</li>
+<li> 动态多态：即在运行时才能确定调用哪个方法，也称为运行时多态，也称为动态联编，也称为动绑定； </li>
+<li>Java中，实现多态有3个条件：<strong>继承、覆盖、向上转型</strong>，缺一不可。 <ul>
+<li>“覆盖(override)方法、抽象方法和接口” 和动态联编关系紧密</li>
+</ul>
+</li>
+</ul>
+<h5 id="Java形成动态多态必须具备以下条件："><a href="#Java形成动态多态必须具备以下条件：" class="headerlink" title="Java形成动态多态必须具备以下条件："></a>Java形成动态多态必须具备以下条件：</h5><ul>
+<li> Java形成动态多态必须具备以下条件： </li>
+</ul>
+<p>  ① 必须要有继承的情况存在； </p>
+<p>  ② 在继承中必须要有方法覆盖； </p>
+<p>  ③ 必须由父类的引用指向派生类的实例，并且通过父类的引用调用被覆盖的方法； </p>
+<ul>
+<li>由上述条件可以看出，<strong>继承是实现动态多态的首要前提</strong>。</li>
+</ul>
+<h5 id="方法覆盖（override）"><a href="#方法覆盖（override）" class="headerlink" title="方法覆盖（override）"></a>方法覆盖（override）</h5><ul>
+<li><p>方法覆盖：方法名、参数个数、参数类型及参数顺序必须一致； </p>
+</li>
+<li><p>若父类方法定义时有异常抛出，则子类覆盖父类该方法时时，该方法也不能有更多的异常抛 出，否则编译时会产生错误</p>
+</li>
+<li><p>子类方法不能缩小父类方法的访问权限： </p>
+<p>a) 一个package方法可以被重写为package、 protected和public的； </p>
+<p>b) 一个protected方法可以被重写为protected和 public的； </p>
+<p>c) 一个public方法只可以被重写为public的；</p>
+<p>② <strong>私有方法、静态方法不能被覆盖</strong>，如果在子类出现了同签名的方法，就是方法隐藏； </p>
+<p>③ 父类中，被final修饰的方法是最终方法，不 允许覆盖。</p>
+</li>
+</ul>
+<h3 id="多态的实现：通过继承实现"><a href="#多态的实现：通过继承实现" class="headerlink" title="多态的实现：通过继承实现"></a>多态的实现：通过继承实现</h3><ul>
+<li>Java中，一个类只能有一个父类，不能多继承。 </li>
+<li>Java中，一个父类可以有多个子类，而在子类里可以覆盖父类的方法。 </li>
+<li>当用父类的变量去引用不同的子类，在调用这个相同的方法的时候得到的结果和表现形式就不一样了，这就是多态，相同的消息（也就是调用相同的方法）会有不同的结果</li>
+</ul>
+<h3 id="采用多态技术的优点"><a href="#采用多态技术的优点" class="headerlink" title="采用多态技术的优点"></a>采用多态技术的优点</h3><ul>
+<li>引进多态技术之后，尽管子类的对象千差万别，但都可以采用 <u>父类引用.方法名([参数]) 统一</u> 方式来调用，在程序运行时能根据子对象的不同得到不同的结果。 </li>
+<li>应用程序不必为每一个派生类（子类）编写功能调用，只需要对抽象基类进行处理即可。这种“<strong>以不变应万变</strong>”的形式可以规范、简化程序设计，符合软件工程的“一个接口，多种方法”思想，可以大大提高程序的可复用性。 </li>
+<li>派生类的功能可以被基类的引用变量引用，这叫<strong>向后兼容</strong>，可以提高程序的可扩充性和可维护性。</li>
+</ul>
+<h3 id="多态的运行机制（-）"><a href="#多态的运行机制（-）" class="headerlink" title="多态的运行机制（*）"></a>多态的运行机制（*）</h3><ul>
+<li><p>Java多态机制是基于“方法绑定（binding）”，就是建立method call（方法调用）和method body（方法本体）的关联。 </p>
+</li>
+<li><p>如果绑定动作发生于程序执行前（由编译器和连接器完成），称为“先期绑定”或者早绑定。</p>
+<ul>
+<li>对于面向过程的语言它们没有其他选择，一定是先期绑定。比如C编译器只有一种method call，就是先期绑定。（C++有先期联编和后期联编）</li>
+</ul>
+</li>
+<li><p>在编译阶段能够确定方法在内存什么位置的机制就叫静态绑定机制 </p>
+</li>
+<li><p><u>所有私有方法、静态方法、构造器及final修饰方法都是采用静态绑定机制</u>。在编译器阶段就已经指明了调用方法在常量池中的符号引用，JVM运行的时候只需要进行一 次常量池解析即可</p>
+</li>
+<li><p>当有动多态的情况时，解决方案便是所谓的后期绑定（late binding）即晚绑定：绑定动作将在执行期根据对象类型而进行。 </p>
+</li>
+<li><p>后期绑定也被称为执行期绑定（run-time  binding）或动态绑定（dynamic binding）。</p>
+</li>
+<li><p>对于Java当中的方法而言，final，static， private修饰的方法和构造方法是前期绑定。 </p>
+</li>
+<li><p>Java中，<strong>所有的private方法都被隐式的指定为final的</strong>。 </p>
+</li>
+<li><p>将方法声明为final类型的一是为了防止方法被覆盖，二是为了有效的关闭java中的动态绑定。或者说，<u>这么做便是告诉编译器： 动态绑定是不需要的</u>。于是编译器可以产生效率较佳的程序代码。</p>
+</li>
+</ul>
+<h3 id="题外话：关于抽象类和抽象方法"><a href="#题外话：关于抽象类和抽象方法" class="headerlink" title="题外话：关于抽象类和抽象方法"></a>题外话：关于抽象类和抽象方法</h3><h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>一． 如果一个类继承自某个抽象父类，而没有具体实现抽象父类中的抽象方法，则必须定义为抽象类。 </p>
+<p>二． <strong>抽象类是不能实例化的</strong>，但可以创建它的引用。它的作用是提供一个恰当的父类。因此一般作为其它类的超类,与final类正好相反。 </p>
+<p>三． 如果一个类里有抽象的方法，则这个类就必须声明成抽象的。但一个抽象类中却可以没有抽象方法。</p>
+<ul>
+<li><p>抽象方法不能被private、final或static修饰。为什么？ </p>
+<p>① 抽象方法必须被子类所覆盖，如果说明为 private，则外部无法访问，覆盖也无从谈起。 </p>
+<p>② 若说明为static，即使不创建对象也能访问： 类名.方法名() ，这要求给出方法体，但与抽象方法的定义相矛盾。 </p>
+<p>③ Final和abstract含义矛盾 </p>
+</li>
+<li><p>当类实现了一个接口，但并没有实现该接口的所有方法时，该类必须声明为抽象类，否则出错；</p>
+</li>
+</ul>
+<h3 id="小结：多态的优点："><a href="#小结：多态的优点：" class="headerlink" title="小结：多态的优点："></a>小结：多态的优点：</h3><ul>
+<li>应用程序不必为每一个派生类（子类）编写功能调用，只需要对抽象基类进行处理即可。这一招叫 “<strong>以不变应万变</strong>”，可以大大提高程序的可复用性。 </li>
+<li>派生类的功能可以被基类的引用变量引用，这叫<strong>向后兼容</strong>，可以提高程序的可扩充性和可维护性，程序的调用界面清楚，可读性好，并解决代码冗余。</li>
+</ul>
 
                 
             </div>
@@ -586,7 +615,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Sasuke7chen.github.io/2021/0408sql-zuo-ye.html">http://Sasuke7chen.github.io/2021/0408sql-zuo-ye.html</a>
+                    <a href="http://Sasuke7chen.github.io/2021/0416java-polymorphism.html">http://Sasuke7chen.github.io/2021/0416java-polymorphism.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,8 +653,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SQL/">
-                                    <span class="chip bg-color">SQL</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -797,17 +826,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2021/0409java-inheritance.html">
+                <a href="/2021/0416java-polymorphism.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java-inheritance">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Java-polymorphism">
                         
-                        <span class="card-title">Java-inheritance</span>
+                        <span class="card-title">Java-polymorphism</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -817,9 +847,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -832,6 +862,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -850,13 +881,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/0408-guan-yu-java.html">
+                <a href="/2021/0415-er-fen-yu-qian-zhui-he.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="关于Java">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="二分与前缀和">
                         
-                        <span class="card-title">关于Java</span>
+                        <span class="card-title">二分与前缀和</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -867,14 +898,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Summary/" class="post-category">
-                                    Summary
+                            <a href="/categories/%E8%93%9D%E6%A1%A5%E6%9D%AF/" class="post-category">
+                                    蓝桥杯
                                 </a>
                             
                             
@@ -884,8 +915,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/C-C/">
+                        <span class="chip bg-color">C/C++</span>
                     </a>
                     
                 </div>
