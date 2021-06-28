@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Shanecaiii" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Shanecaiii" type="application/atom+xml">
+</head>
 
 
 
@@ -487,11 +487,11 @@
 </ul>
 <h2 id="理解继承"><a href="#理解继承" class="headerlink" title="理解继承"></a>理解继承</h2><h3 id="细说继承"><a href="#细说继承" class="headerlink" title="细说继承"></a>细说继承</h3><ul>
 <li>继承是使用已存在的类的定义作为基础，建立新类的技术</li>
-<li>继承是在保留原有类的数据成员和成员函数的基础上，派生出新类，新的类可以有某种程度的变异</li>
-<li>通过继承，新类自动具有了原有类的所有数据成员和成员函数，因而只需定义原有类型没有的新的数据成员和成员函数。实现了软件复用，使得类之间具备了层次性</li>
+<li>继承是在保留原有类的数据成员和成员函数的基础上，派生出新类，<strong>新的类可以有某种程度的变异</strong></li>
+<li>通过继承，新类<strong>自动具有了原有类的所有数据成员和成员函数</strong>，因而只需定义原有类型没有的新的数据成员和成员函数。实现了<strong>软件复用</strong>，使得类之间具备了<strong>层次性</strong></li>
 <li>通过继承和派生形成的类族，反映了面向对象问题域、主题等概念。</li>
 </ul>
-<h3 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h3><ol>
+<h3 id="类的继承（is-a）"><a href="#类的继承（is-a）" class="headerlink" title="类的继承（is a）"></a>类的继承（is a）</h3><ol>
 <li><p>被继承的类称为父类（superclass）,继承后产生的类称为子类（subclass）。 </p>
 </li>
 <li><p>单继承：如果子类只能有一个直接父类，称为单继承。 </p>
@@ -512,7 +512,7 @@
 <h3 id="基类和派生类的关系"><a href="#基类和派生类的关系" class="headerlink" title="基类和派生类的关系"></a>基类和派生类的关系</h3><ul>
 <li><p>基类是对若干个派生类的抽象 </p>
 <ul>
-<li>基类抽取了派生类的公共特征，在设计类时，应该将通用的方法放到超类中</li>
+<li>基类抽取了派生类的公共特征，在设计类时，<strong>应该将通用的方法放到超类中</strong></li>
 </ul>
 </li>
 <li><p>派生类是基类的具体化</p>
@@ -528,15 +528,15 @@
 </li>
 </ul>
 <h4 id="子类从父类那里继承了什么？"><a href="#子类从父类那里继承了什么？" class="headerlink" title="子类从父类那里继承了什么？"></a>子类从父类那里继承了什么？</h4><ol>
-<li><p>子类拥有父类的所有属性和方法，只不过父类的私有属性和方法，子类是无法直接访问到的。</p>
+<li><p>子类拥有父类的所有属性和方法，<strong>只不过父类的私有属性和方法，子类是无法直接访问到的</strong>。</p>
 </li>
 <li><p>子类可以拥有自己属性和方法，即子类可以对父类进行扩展。</p>
 </li>
-<li><p>子类可以用自己的方式实现父类的方法。（方法覆盖）。</p>
+<li><p>子类可以用自己的方式实现父类的方法。（<strong>方法覆盖</strong>）</p>
 </li>
 </ol>
 <h4 id="子类从父类那里不能继承什么？"><a href="#子类从父类那里不能继承什么？" class="headerlink" title="子类从父类那里不能继承什么？"></a>子类从父类那里不能继承什么？</h4><ul>
-<li>子类不能继承父类的构造方法    <ul>
+<li><strong>子类不能继承父类的构造方法</strong>    <ul>
 <li>如何解决？</li>
 </ul>
 </li>
@@ -544,7 +544,7 @@
 <h3 id="继承的进一步理解"><a href="#继承的进一步理解" class="headerlink" title="继承的进一步理解"></a>继承的进一步理解</h3><ul>
 <li><p>继承避免了公用代码的重复开发，减少代码的冗余，提高程序的复用性；</p>
 </li>
-<li><p>支持多态（通过向上映射），提高程序的可扩展性；</p>
+<li><p><strong>支持多态（通过向上映射）</strong>，提高程序的可扩展性；</p>
 </li>
 <li><p>继承是类实现可重用性和可扩充性的关键持征。在继承关系下类之间组成网状的层次结构。</p>
 </li>
@@ -567,7 +567,7 @@
 <h4 id="子类构造函数"><a href="#子类构造函数" class="headerlink" title="子类构造函数"></a>子类构造函数</h4><ul>
 <li>构造函数不能被继承；</li>
 <li>无参子类构造函数的编写<ul>
-<li>子类可以通过**super()**显示调用父类无参的构造函数，也可以隐式调用</li>
+<li>子类可以通过<strong>super()<strong>显示调用父类无参的构造函数，</strong>也可以隐式调用</strong></li>
 </ul>
 </li>
 <li>有参子类构造函数的编写<ul>
@@ -625,6 +625,20 @@
 </li>
 </ol>
 <p><strong>super用于：</strong></p>
+<ol>
+<li>引用父类对象的成员变量<ul>
+<li>super.age;</li>
+</ul>
+</li>
+<li>引用父类对象的成员方法<ul>
+<li>super.diaplay();</li>
+</ul>
+</li>
+<li>调用父类的构造方法<ul>
+<li>super(“Jack”,Male,10);</li>
+</ul>
+</li>
+</ol>
 <p><strong>Note：</strong></p>
 <ol>
 <li>无论使用this调用本类构造函数，还是使用super调用父类构造函数，都必须是该方法体中的第一条可以执行语句。</li>
@@ -632,11 +646,11 @@
 </ol>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/cUBwTO"><img src="https://z3.ax1x.com/2021/04/09/cUBwTO.png" alt="复习访问修饰符"></a></p>
 <h4 id="派生类-子类成员（变量和方法）"><a href="#派生类-子类成员（变量和方法）" class="headerlink" title="派生类/子类成员（变量和方法）"></a>派生类/子类成员（变量和方法）</h4><ul>
-<li>保护成员可以被派生类直接访问</li>
-<li>公共成员可以被派生类直接访问</li>
-<li>如果子类和父类位于同一个包中，子类可 以直接访问父类的不加权限修饰符的成员</li>
+<li>保护成员可以被派生类直接访问（protected）</li>
+<li>公共成员可以被派生类直接访问（public）</li>
+<li>如果子类和父类位于同一个包中，子类可以直接访问父类的不加权限修饰符的成员（default）</li>
 <li>派生类可以重新定义基类的成员函数（覆盖）</li>
-<li>派生类可以添加自己的新成员（变量和方 法）</li>
+<li>派生类可以添加自己的新成员（变量和方法）</li>
 </ul>
 <h4 id="保持基类数据成员私有性"><a href="#保持基类数据成员私有性" class="headerlink" title="保持基类数据成员私有性"></a>保持基类数据成员私有性</h4><p>将基类数据成员定义成private</p>
 <ul>
@@ -657,19 +671,19 @@
 </ul>
 <h4 id="向上转型-upcasting"><a href="#向上转型-upcasting" class="headerlink" title="向上转型(upcasting)"></a>向上转型(upcasting)</h4><ul>
 <li>将子类转换成父类，在继承关系上面是向上移动的，所以一般称之为向上转型或者向上映射。</li>
-<li>由于向上转型是从一个叫专用类型向较通用类型转换，所以它总是安全的，唯一发生变化的可能就是属性和方法的丢失。</li>
+<li>由于向上转型是从一个叫专用类型向较通用类型转换，所以它总是安全的，唯一发生变化的可能就是<strong>属性和方法的丢失</strong>。</li>
 <li>这就是为什么编译器在“未曾明确表示转型”或者“未曾指定特殊标记”的情况下，仍然允许向上转型的原因。</li>
 </ul>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/cUBBkD"><img src="https://z3.ax1x.com/2021/04/09/cUBBkD.png" alt="示例代码"></a></p>
 <p><strong>缺憾：</strong> 只能调用父类中定义的属性和方法，对于子类中的方法和属性它就望尘莫及了，必须<strong>强制转成子类类型</strong></p>
-<h4 id="变量隐藏"><a href="#变量隐藏" class="headerlink" title="变量隐藏"></a>变量隐藏</h4><ol>
+<h4 id="变量隐藏（变量全隐藏）"><a href="#变量隐藏（变量全隐藏）" class="headerlink" title="变量隐藏（变量全隐藏）"></a>变量隐藏（变量全隐藏）</h4><ol>
 <li><p>变量隐藏：在子类对父类的继承中，如果子类的成员变量和父类的成员变量同名，此时称为子类隐藏（override）了父类的成员变量。</p>
 </li>
 <li><p>子类若要引用父类的同名变量。要用 super 关键字做前缀加圆点操作符引用, 即<strong>super.变量名</strong></p>
 </li>
 </ol>
 <h4 id="方法覆盖"><a href="#方法覆盖" class="headerlink" title="方法覆盖"></a>方法覆盖</h4><ol>
-<li>方法覆盖：在子类中重写父类的方法，它们的名称、参数以及返回类型完全相同。</li>
+<li>方法覆盖：在子类中重写父类的方法，它们的<strong>名称、参数以及返回类型完全相同</strong>。</li>
 <li>通过改写方法体来完成不同的功能</li>
 </ol>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h3 id="继承是否破坏了类的封装性？"><a href="#继承是否破坏了类的封装性？" class="headerlink" title="继承是否破坏了类的封装性？"></a>继承是否破坏了类的封装性？</h3><ul>
